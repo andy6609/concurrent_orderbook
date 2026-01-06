@@ -1,4 +1,4 @@
-# Concurrent Order Book (C++17)
+# 🔧 Concurrent Order Book (C++17)
 
 A small, well-scoped limit order book in modern C++17 built to study **correctness-first design** and **locking trade-offs** under contention.
 It implements price–time priority matching, then gradually adds synchronization to support safe concurrent access.
@@ -7,7 +7,7 @@ It implements price–time priority matching, then gradually adds synchronizatio
 
 ---
 
-## What this project covers
+## 💹 What this project focuses on  
 
 - **Price–Time Priority matching**
   - Best price first, FIFO within a price level
@@ -20,7 +20,7 @@ It implements price–time priority matching, then gradually adds synchronizatio
 
 ---
 
-## Architecture (high-level)
+## 🔧 Architecture (high-level)
 
 ```
 OrderBook
@@ -31,7 +31,7 @@ OrderBook
     └── orders_ : id -> pointer/reference to the resting order
 ```
 
-### Concurrency model
+### 🔧 Concurrency model
 
 - **Read path** (`best_bid_price`, `best_ask_price`, `total_orders`)
   - `std::shared_lock<std::shared_mutex>`
@@ -44,7 +44,7 @@ This is designed to be easy to reason about and to benchmark. The intent is to c
 
 ---
 
-## Build
+## Build 🔧 🔧 
 
 ### Requirements
 - C++17 compiler (GCC / Clang / MSVC)
